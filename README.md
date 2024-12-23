@@ -3,6 +3,15 @@ This project implements a fully automated CI/CD pipeline to streamline the proce
 
 ![Project Architecture](./structure.png)
 
+Project images:
+![Implementation 1](./s1.png)
+![Implementation 2](./s2.png)
+![Implementation 3](./s3.png)
+![Implementation 4](./s4.png)
+![Implementation 5](./s5.png)
+![Implementation 6](./s6.png)
+![Implementation 7](./s7.png)
+
 
 Project Workflow:
 
@@ -27,19 +36,17 @@ AWS Elastic Beanstalk provides automatic scaling based on traffic and integrated
 
 
 
-Prerequisites
-To set up and use this CI/CD pipeline, ensure you have the following:
+Prerequisites:
 
+To set up and use this CI/CD pipeline, ensure you have the following:
 AWS Account with permissions to manage CodePipeline, CodeBuild, Elastic Beanstalk, and related services.
 Bitbucket Repository containing the application’s source code.
 A buildspec.yml file to define the build steps.
 Elastic Beanstalk Application and an environment configured to deploy your application.
 Setting Up the CI/CD Pipeline
 Set Up a Bitbucket Repository
-
 Push your application’s source code to a Bitbucket repository.
 Configure AWS CodePipeline
-
 Create a new pipeline using the AWS Management Console.
 Set Bitbucket as the source stage and link it to your repository.
 Create an AWS CodeBuild Project
