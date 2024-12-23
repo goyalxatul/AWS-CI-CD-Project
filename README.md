@@ -3,26 +3,30 @@ This project implements a fully automated CI/CD pipeline to streamline the proce
 
 ![Project Architecture](./structure.png)
 
-Project Workflow
-Bitbucket as Code Source
 
+Project Workflow:
+
+1.Bitbucket as Code Source:
 The source code is managed in a Bitbucket repository.
 Any changes pushed to the repository trigger the AWS CodePipeline, initiating the CI/CD process.
-AWS CodePipeline
 
+2.AWS CodePipeline:
 Serves as the backbone of the CI/CD process.
 Fetches the source code from Bitbucket, runs the build process using AWS CodeBuild, and deploys the final artifact to AWS Elastic Beanstalk.
-AWS CodeBuild
 
+3.AWS CodeBuild:
 Compiles the code, runs tests, and prepares the build artifacts for deployment.
 It uses the buildspec.yml file in the repository to define the build instructions.
-AWS Elastic Beanstalk
 
+4.AWS Elastic Beanstalk:
 Manages the deployment of the application.
 Automatically provisions and scales infrastructure (e.g., EC2 instances, load balancers) to host the application.
-Scaling and Monitoring
 
+5.Scaling and Monitoring:
 AWS Elastic Beanstalk provides automatic scaling based on traffic and integrated monitoring for performance and availability.
+
+
+
 Prerequisites
 To set up and use this CI/CD pipeline, ensure you have the following:
 
@@ -46,29 +50,7 @@ Deploy to Elastic Beanstalk
 
 Configure Elastic Beanstalk as the deployment stage in AWS CodePipeline.
 Make sure the build artifacts are compatible with your Elastic Beanstalk environment.
-Sample buildspec.yml
-Below is an example of a buildspec.yml file to guide your build process:
 
-yaml
-Copy code
-version: 0.2
-
-phases:
-  install:
-    commands:
-      - echo Installing dependencies...
-      - npm install
-  build:
-    commands:
-      - echo Building the application...
-      - npm run build
-  post_build:
-    commands:
-      - echo Preparing for deployment...
-      - zip -r app.zip .
-artifacts:
-  files:
-    - app.zip
 Benefits of the CI/CD Pipeline
 Automation: Eliminates manual intervention in the deployment process, improving efficiency.
 Scalability: Automatically scales applications using Elastic Beanstalk to handle varying traffic loads.
