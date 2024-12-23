@@ -1,4 +1,4 @@
-AWS-CI-CD-Project
+**AWS-CI-CD-Project**
 This project implements a fully automated CI/CD pipeline to streamline the process of building, testing, and deploying applications using AWS services. The pipeline is integrated with Bitbucket for source code management and deploys the application to AWS Elastic Beanstalk for hosting.
 
 Project Workflow
